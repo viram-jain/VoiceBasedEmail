@@ -1,0 +1,40 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<body onmousedown="SendPostRequestHome(event)">
+	<font color="white">
+		<div class="any">
+			<center>
+				<br><b><u>
+						<h1 class="display-3 font-weight-bold"> Welcome To Our Voice Based Email Application! </h1>
+					</u></b><br>
+				<br><br>
+				<h1 class="display-4">Our Team :</h1><br>
+				<ul style="list-style-type:none; font-size:24px;">
+					<li>Krithika A K</li>
+					<li>Rachana N Shenoy</li>
+					<li>Rakshitha A</li>
+					<li>Viram Jain</li>
+				</ul>
+			</center>
+	</font>
+	<script>
+		function SendPostRequestHome(event) {
+			$.ajax({
+				url: "{% url 'homepage:login' %}",
+				method: 'POST',
+				data: { 'csrfmiddlewaretoken': '{{ csrf_token }}' },
+				success: function (data) {
+					if (data.result == 'success') {
+						window.location = "{% url 'homepage:options' %}";
+					}
+					else if (data.result == 'failure') {
+						window.location = "{% url 'homepage:login' %}";
+					}
+				}
+			});
+		}
+	</script>
+
+	{% endblock %}
