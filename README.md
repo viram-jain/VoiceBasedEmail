@@ -3,6 +3,7 @@
 <div align= "center"><img src="https://media.istockphoto.com/vectors/voice-email-vector-id1061198900?k=20&m=1061198900&s=612x612&w=0&h=iOwwlHhB-pYpN_89Fw_ZXZn0_NMhmcVFAYeVFg55YoE=" width="200" height="200"/>
   <h4>A Voice based email system which enables to communicate through Email just by providing voice commands.</h4>
 </div>
+<br>
 
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/viram-jain/VoiceBasedEmail/issues)
